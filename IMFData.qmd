@@ -321,13 +321,13 @@ CSV.write(
 
 ```{julia}
 ifs_indicators = ifs_structure["Parameter Values"]["CL_INDICATOR_IFS"]
+countries  = ["GT","HN","SV","NI","CR","PA"]
 #gdp_indicators = @where(
 gdp_indicators = DataFramesMeta.@subset(
 	ifs_indicators,
 	DataFrames.occursin.("Gross Domestic Product", :description),
 	DataFrames.occursin.("Domestic Currency", :description))
 indicators = gdp_indicators[!,1]
-countries  = ["GT","HN","SV","NI","CR","PA"]
 countries_indicators = get_ifs_data(countries, indicators, "Q", 1900, 2100)
 ```
 
