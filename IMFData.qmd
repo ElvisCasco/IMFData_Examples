@@ -53,49 +53,49 @@ CSV.write(
 ## Get the list of parameters ("dimensions") for a dataset and their values
 
 ```{julia}
-ifs_structure = get_imf_datastructure("IFS")
+# ifs_structure = get_imf_datastructure("IFS")
 ```
 
 ### Parameter Names
 
 ```{julia}
-collect(values(ifs_structure))[1]
+# collect(values(ifs_structure))[1]
 ```
 
 ### Parameter Values
 
 ```{julia}
-collect(values(ifs_structure))[2]
+# collect(values(ifs_structure))[2]
 ```
 
 1. "CL_UNIT_MULT"
 
 ```{julia}
-collect(collect(values(ifs_structure))[2])[2]
+# collect(collect(values(ifs_structure))[2])[2]
 ```
 
 2. "CL_FREQ"
 
 ```{julia}
-collect(collect(values(ifs_structure))[2])[5]
+# collect(collect(values(ifs_structure))[2])[5]
 ```
 
 3. "CL_AREA_IFS"
 
 ```{julia}
-collect(collect(values(ifs_structure))[2])[4]
+# collect(collect(values(ifs_structure))[2])[4]
 ```
 
 4. "CL_INDICATOR_IFS"
 
 ```{julia}
-collect(collect(values(ifs_structure))[2])[1]
+# collect(collect(values(ifs_structure))[2])[1]
 ```
 
 5. "CL_TIME_FORMAT"
 
 ```{julia}
-collect(collect(values(ifs_structure))[2])[3]
+# collect(collect(values(ifs_structure))[2])[3]
 ```
 
 ## Filter Datasets by Key
